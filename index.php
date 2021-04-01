@@ -8,6 +8,13 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+
+
+    <div id="ip" style="font-size: large">
+      <?php
+        echo shell_exec('/usr/sbin/ifconfig | grep -e "inet [0-9.]*"');
+              ?> 
+    </div>
     <button id="btn" class="magic">click me dawg!</button>
     <div id="boxes" class="boxes"></div>
     <script src="script.js"></script>
